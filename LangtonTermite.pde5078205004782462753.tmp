@@ -1,5 +1,5 @@
 //OPTIONS
-int delay = 0; //ms between each tick
+int delay = 0; //frames between each tick
 boolean randDir = false; //should ants have random direction?
 
 int[][] cells; //the actual cell, and the holding cell
@@ -20,7 +20,7 @@ ArrayList<Termite> termites = new ArrayList<Termite>();
 PFont f, fsmall;
 
 String termiteSeed = "";
-int numStates;
+boolean movesLeft;
 color[] colors;
 
 void setup() {
@@ -40,10 +40,10 @@ void setup() {
   clearGrid();
 
   termiteSeed = javax.swing.JOptionPane.showInputDialog("Input termite movement pattern");
-  numStates = termiteSeed.length();
-  colors = new color[numStates];
+  colors = new color[termiteSeed.length()];
   colors[0] = empty;
-  for (int c = 1; c < numStates; c++) {
+
+  for (int c = 1; c < termiteSeed.length(); c++) {
     colors[c] = color(int(random(256)), int(random(256)), int(random(256)));
   }
 }
@@ -65,7 +65,7 @@ void draw() {
     textFont(f);
     text("Paused", 15, 30);
     text("Step: " + steps, 15, 60);
-    text("Termite movement pattern: " + termiteSeed, 15, 90);
+    text("Termite steps: " + termiteSeed, 15, 90);
     textFont(fsmall);
     text("Reset [R]", 15, 120);
     text("Pause/unpause [SPACE]", 15, 140);
@@ -86,18 +86,14 @@ void iteration() {
     return;
 
   for (Termite t : termites) {
-    int prevColor = cells[t.r][t.c];
-
     //color the cell from which the ant has left
     cells[t.r][t.c]++;
-
-    if (cells[t.r][t.c] == numStates)
-      cells[t.r][t.c] = 0;
+    cells[t.r][t.c]%=termiteSeed.length();
 
     fill(colors[cells[t.r][t.c]]);
     rect(t.c*cellSize, t.r*cellSize, cellSize, cellSize);
 
-    t.move(prevColor);
+    t.move(cells[t.r][t.c]);
     drawTermite(t);
   }
 

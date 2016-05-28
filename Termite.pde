@@ -13,13 +13,14 @@ class Termite {
   }
 
   void move(int cur_cell) {
-    angle += moves.substring(cur_cell).equals("L")? 90: -90;
 
-    while (angle < 0) {
+    angle += moves.charAt(cur_cell) == 'L' ? 90: -90;
+
+    if (angle < 0)
       angle += 360;
-    }
 
-    angle %= 360;
+    if (angle >= 360)
+      angle -= 360;
 
     switch(angle) {
     case 0:
@@ -36,9 +37,13 @@ class Termite {
       break;
     }
 
-    if (r < 0) r = max_rows-1;
-    if (c < 0) c = max_cols-1;
-    r %= max_rows;
-    c %= max_cols;
+    if (r < 0) 
+      r = max_rows-1;
+    if (c < 0) 
+      c = max_cols-1;
+    if (r >= max_rows)
+      r %= max_rows;
+    if (c >= max_cols)
+      c %= max_cols;
   }
 }
