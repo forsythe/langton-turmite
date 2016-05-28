@@ -30,4 +30,7 @@ Movement pattern: `LRRRRRLLR`
 Movement pattern: `LRRRLLR`  
 
 ![4](https://i.gyazo.com/9c95124116322b8369f01b9b09d5774b.gif)  
-Movement pattern: `LLLRLRRRRRRRR`  
+Movement pattern: `LLLRLRRRRRRRR` 
+
+![5](https://i.gyazo.com/4d5d409d8c5305d4e5aa3e846bd3efda.gif)  
+Movement pattern: `LLRRRLRRRRR`
