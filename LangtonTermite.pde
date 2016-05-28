@@ -26,6 +26,7 @@ int tempColor;
 
 void setup() {
   size(1800, 900);
+  frameRate(120);
 
   f = createFont("Arial", 30, true);
   fsmall = createFont("Arial", 20, true);
@@ -70,7 +71,7 @@ void draw() {
     textFont(fsmall);
     text("Reset [R]", 15, 120);
     text("Pause/unpause [SPACE]", 15, 140);
-    text("Spawn ant [Mouse]", 15, 160);
+    text("Spawn termite [Mouse]", 15, 160);
   }
 }
 
@@ -87,7 +88,6 @@ void iteration() {
   for (Termite t : termites) {
     tempColor = cells[t.r][t.c];
 
-    //color the cell from which the ant has left
     cells[t.r][t.c]++;
 
     if (cells[t.r][t.c] == numStates)
