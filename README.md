@@ -6,7 +6,7 @@ Demo movement pattern: `LRRRRRLLR`
 ### How it works
 
 The program will ask you for a movement pattern (a string of  `L`'s and `R`'s):   
-If the first letter of your movement pattern is an `L`, it will move left on the first color. If the second letter of your movement pattern is an `R`, the termite will move right on the second color, etc. The colors are randomly generated, with the exception of the first color, which remains black.  
+If the first letter of your movement pattern is an `L`, the termite will move left on the first color. If the second letter of your movement pattern is an `R`, the termite will move right on the second color, etc. The colors are randomly generated, with the exception of the first color, which remains black.  
 
 
 ### Customizable options  
