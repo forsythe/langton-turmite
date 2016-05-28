@@ -22,9 +22,12 @@ If the first letter of your movement pattern is an `L`, the termite will move le
 ### Gallery  
 ![1](https://i.gyazo.com/4944079ff00151bfdc13ac6e084464f3.gif)  
 Movement pattern: `RRRRLLLL`  
+
 ![2](https://i.gyazo.com/fd137d6e8585e81c486a9529e9ae0a81.gif)  
 Movement pattern: `LRRRRRLLR`  
+
 ![3](https://i.gyazo.com/a0db2b5a0221d3438955a453cdae2b40.gif)  
 Movement pattern: `LRRRLLR`  
-![4](https://i.gyazo.com/9c95124116322b8369f01b9b09d5774b.gif)
+
+![4](https://i.gyazo.com/9c95124116322b8369f01b9b09d5774b.gif)  
 Movement pattern: `LLLRLRRRRRRRR`  
