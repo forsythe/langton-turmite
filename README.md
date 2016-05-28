@@ -10,8 +10,8 @@ If the first letter of your movement pattern is an `L`, it will move left on the
 
 
 ### Customizable options  
-`delay`: Milliseconds between each ant move  
-`randDir`: Whether or not to initialize ants with a random direction  
+`delay`: Milliseconds between each termite move  
+`randDir`: Whether or not to initialize termite with a random direction  
 `cellSize`: Size of each grid in pixels  
 
 ### Controls  
