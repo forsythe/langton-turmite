@@ -1,7 +1,7 @@
 ### Summary
 
 Like [langton's ant](https://github.com/forsythe/langtons-ant), but with multiple colors and states. ![demo](https://i.gyazo.com/023e79492d360680603d400e3c9d3999.gif)  
-Movement pattern: `LRRRRRLLR`  
+Demo movement pattern: `LRRRRRLLR`  
 
 ### How it works
 
