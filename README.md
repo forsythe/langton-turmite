@@ -20,17 +20,17 @@ If the first letter of your movement pattern is an `L`, the termite will move le
 `R`: Reset  
 
 ### Gallery  
-![1](https://i.gyazo.com/4944079ff00151bfdc13ac6e084464f3.gif)  
 Movement pattern: `RRRRLLLL`  
+![1](https://i.gyazo.com/4944079ff00151bfdc13ac6e084464f3.gif)  
 
-![2](https://i.gyazo.com/fd137d6e8585e81c486a9529e9ae0a81.gif)![2.5](https://i.gyazo.com/6097b8811daeb18cd3ccfa03dac00f8e.gif)  
 Movement pattern: `LRRRRRLLR`  
+![2](https://i.gyazo.com/fd137d6e8585e81c486a9529e9ae0a81.gif)![2.5](https://i.gyazo.com/6097b8811daeb18cd3ccfa03dac00f8e.gif)  
 
-![3](https://i.gyazo.com/a0db2b5a0221d3438955a453cdae2b40.gif)  
 Movement pattern: `LRRRLLR`  
+![3](https://i.gyazo.com/a0db2b5a0221d3438955a453cdae2b40.gif)  
 
+Movement pattern: `LLLRLRRRRRRRR`  
 ![4](https://i.gyazo.com/9c95124116322b8369f01b9b09d5774b.gif)  
-Movement pattern: `LLLRLRRRRRRRR` 
 
+Movement pattern: `LLRRRLRRRRR`  
 ![5](https://i.gyazo.com/4d5d409d8c5305d4e5aa3e846bd3efda.gif)  
-Movement pattern: `LLRRRLRRRRR`
