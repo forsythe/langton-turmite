@@ -1,11 +1,14 @@
 ### Summary
 
-Like [langton's ant](https://github.com/forsythe/langtons-ant), but with multiple colors and states. ![demo](https://i.gyazo.com/023e79492d360680603d400e3c9d3999.gif)
+Like [langton's ant](https://github.com/forsythe/langtons-ant), but with multiple colors and states. ![demo](https://i.gyazo.com/023e79492d360680603d400e3c9d3999.gif)  
+Movement pattern: `LRRRRRLLR`  
 
 ### How it works
 
-The program will ask you for a movement pattern (in `L`s and `R`s:   
-If the first letter of your movement pattern is an `L`, it will move left on the first color (randomly generated). If the second letter of your movement pattern is an `R`, the termite will move right on the second color, etc.
+The program will ask you for a movement pattern (in `L`s and `R`s):   
+If the first letter of your movement pattern is an `L`, it will move left on the first color (randomly generated). If the second letter of your movement pattern is an `R`, the termite will move right on the second color, etc.  
+
+
 
 
 ### Customizable options  
