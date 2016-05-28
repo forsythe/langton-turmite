@@ -17,10 +17,10 @@ class Termite {
     angle += moves.charAt(cur_cell) == 'L' ? 90: -90;
 
     if (angle < 0)
-      angle += 360;
+      angle = 270;
 
     if (angle >= 360)
-      angle -= 360;
+      angle = 0;
 
     switch(angle) {
     case 0:

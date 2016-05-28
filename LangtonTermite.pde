@@ -22,6 +22,7 @@ PFont f, fsmall;
 String termiteSeed = "";
 int numStates;
 color[] colors;
+int tempColor;
 
 void setup() {
   size(1800, 900);
@@ -82,11 +83,9 @@ void mouseClicked() {
 }
 
 void iteration() {
-  if (termites.size() == 0)
-    return;
 
   for (Termite t : termites) {
-    int prevColor = cells[t.r][t.c];
+    tempColor = cells[t.r][t.c];
 
     //color the cell from which the ant has left
     cells[t.r][t.c]++;
@@ -97,7 +96,7 @@ void iteration() {
     fill(colors[cells[t.r][t.c]]);
     rect(t.c*cellSize, t.r*cellSize, cellSize, cellSize);
 
-    t.move(prevColor);
+    t.move(tempColor);
     drawTermite(t);
   }
 
