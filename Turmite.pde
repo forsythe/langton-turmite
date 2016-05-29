@@ -1,9 +1,9 @@
-class Termite {
+class Turmite {
   public int r, c, angle; //angle in degrees
   int max_rows, max_cols;
   String moves;
 
-  Termite(int r_rhs, int c_rhs, int angle_rhs, int num_rows, int num_cols, String moves_rhs) {
+  Turmite(int r_rhs, int c_rhs, int angle_rhs, int num_rows, int num_cols, String moves_rhs) {
     r = r_rhs;
     c = c_rhs;
     angle = angle_rhs;

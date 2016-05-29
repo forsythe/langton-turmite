@@ -15,11 +15,11 @@ color white = color(255, 255, 255);
 color empty = color(0);
 color antColor = color(255, 0, 0);
 
-ArrayList<Termite> termites = new ArrayList<Termite>();
+ArrayList<Turmite> turmites = new ArrayList<Turmite>();
 
 PFont f, fsmall;
 
-String termiteSeed = "";
+String turmiteSeed = "";
 int numStates;
 color[] colors;
 int tempColor;
@@ -41,8 +41,8 @@ void setup() {
   rect(0, 0, width, height);
   clearGrid();
 
-  termiteSeed = javax.swing.JOptionPane.showInputDialog("Input termite movement pattern");
-  numStates = termiteSeed.length();
+  turmiteSeed = javax.swing.JOptionPane.showInputDialog("Input termite movement pattern");
+  numStates = turmiteSeed.length();
   colors = new color[numStates];
   colors[0] = empty;
   for (int c = 1; c < numStates; c++) {
@@ -59,7 +59,7 @@ void draw() {
   } else {
     redrawGrid();
 
-    for (Termite t : termites) {
+    for (Turmite t : turmites) {
       drawTermite(t);
     }
 
@@ -67,7 +67,7 @@ void draw() {
     textFont(f);
     text("Paused", 15, 30);
     text("Step: " + steps, 15, 60);
-    text("Termite movement pattern: " + termiteSeed, 15, 90);
+    text("Turmite movement pattern: " + turmiteSeed, 15, 90);
     textFont(fsmall);
     text("Reset [R]", 15, 120);
     text("Pause/unpause [SPACE]", 15, 140);
@@ -79,13 +79,13 @@ void mouseClicked() {
   int mouseRow = int(map(mouseY, 0, height, 0, numSquaresPerRow));
   int mouseCol = int(map(mouseX, 0, width, 0, numSquaresPerColumn)); 
 
-  termites.add(new Termite(mouseRow, mouseCol, randDir? int(random(4))*90 : 0, numSquaresPerRow, numSquaresPerColumn, termiteSeed));
-  drawTermite(termites.get(termites.size()-1));
+  turmites.add(new Turmite(mouseRow, mouseCol, randDir? int(random(4))*90 : 0, numSquaresPerRow, numSquaresPerColumn, termiteSeed));
+  drawTermite(turmites.get(turmites.size()-1));
 }
 
 void iteration() {
 
-  for (Termite t : termites) {
+  for (Turmite t : turmites) {
     tempColor = cells[t.r][t.c];
 
     cells[t.r][t.c]++;
@@ -97,13 +97,13 @@ void iteration() {
     rect(t.c*cellSize, t.r*cellSize, cellSize, cellSize);
 
     t.move(tempColor);
-    drawTermite(t);
+    drawTurmite(t);
   }
 
   steps++;
 }
 
-void drawTermite(Termite t) {
+void drawTurmite(Turmite t) {
   fill(antColor);
   rect(t.c*cellSize, t.r*cellSize, cellSize, cellSize);
 }
@@ -111,7 +111,7 @@ void drawTermite(Termite t) {
 void keyPressed() {
   if (key == 'r' || key == 'R') {
     clearGrid();
-    termites.clear();
+    turmites.clear();
 
     fill(empty);
     stroke(empty);
@@ -125,8 +125,8 @@ void keyPressed() {
 
     if (!pause) {     //redraw to erase "paused" text
       redrawGrid();
-      for (Termite t : termites) {
-        drawTermite(t);
+      for (Turmite t : turmites) {
+        drawTurmite(t);
       }
     }
   }
